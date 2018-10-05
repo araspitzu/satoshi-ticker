@@ -14,6 +14,15 @@
       <h1 class="centered-box">Satoshi ticker</h1>
 
       <div class="centered-box">
+
+        <select id="currency-selector" onchange="refreshPrice()" style="padding-bottom=5px;">
+          <option value="EUR">Euro</option>
+          <option value="USD">US Dollars</option>
+          <option value="GBP">Pound Sterling</option>
+        </select> 
+
+        <p><br></p>    
+
         <h3 id="satfiat">Loading</h3> 
         <h3 id="satfiat-10">Loading</h3> 
         <h3 id="satfiat-100">Loading</h3> 

@@ -10,20 +10,23 @@ var COIN_SATOSHI = 100000000; //Number of satoshis in 1BTC
 function refreshPrice() {
     console.log('Refreshing the price');
 
+    var selectedCurrency = $("#currency-selector").find(":selected").val();
+
     $.get("https://api.coindesk.com/v1/bpi/currentprice.json", function(data){
         var result = JSON.parse(data);
-        eurbtcPrice = result.bpi.EUR.rate_float;
-        satoshiEUR = (COIN_SATOSHI / eurbtcPrice).toFixed(0);
+        fiatBTCPrice = result.bpi[selectedCurrency].rate_float;
+        satoshiFIAT = (COIN_SATOSHI / fiatBTCPrice).toFixed(0);
+        fiatSymbol = result.bpi[selectedCurrency].symbol;
 
         $('#satfiat').empty();   
         $('#satfiat-10').empty();
         $('#satfiat-100').empty();
         $('#satfiat-1000').empty();
         
-        $('#satfiat').append("1€ = " + (satoshiEUR).toLocaleString() + " sats"); 
-        $('#satfiat-10').append("10€ = " + (satoshiEUR * 10).toLocaleString() + " sats"); 
-        $('#satfiat-100').append("100€ = " + (satoshiEUR * 100).toLocaleString() + " sats"); 
-        $('#satfiat-1000').append("1000€ = " + (satoshiEUR * 1000).toLocaleString() + " sats"); 
+        $('#satfiat').append("1 "+ fiatSymbol +" = " + (satoshiFIAT).toLocaleString() + " sats"); 
+        $('#satfiat-10').append("10 "+ fiatSymbol +" = " + (satoshiFIAT * 10).toLocaleString() + " sats"); 
+        $('#satfiat-100').append("100 "+ fiatSymbol +" = " + (satoshiFIAT * 100).toLocaleString() + " sats"); 
+        $('#satfiat-1000').append("1000 "+ fiatSymbol +" = " + (satoshiFIAT * 1000).toLocaleString() + " sats"); 
 
     });
     
