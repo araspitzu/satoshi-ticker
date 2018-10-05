@@ -21,9 +21,9 @@ function refreshPrice() {
 
         
         $('#satfiat').append("1€ = " + satoshiEUR + " sats"); 
-        $('#satfiat-10').append("10€ = " + satoshiEUR / 10 + " sats"); 
-        $('#satfiat-100').append("100€ = " + satoshiEUR / 100 + " sats"); 
-        $('#satfiat-1000').append("1000€ = " + satoshiEUR / 1000 + " sats"); 
+        $('#satfiat-10').append("10€ = " + satoshiEUR * 10 + " sats"); 
+        $('#satfiat-100').append("100€ = " + satoshiEUR * 100 + " sats"); 
+        $('#satfiat-1000').append("1000€ = " + satoshiEUR * 1000 + " sats"); 
 
     });
 
