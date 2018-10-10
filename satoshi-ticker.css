@@ -1,7 +1,14 @@
 body {
     padding-top: 35px;
+    background-image: url('bitcoin-1813599_1920.jpg');
+    background-size: auto;
+    font-family: 'Cousine', monospace;
+    overflow-wrap: break-word;    
 }
+
 .centered-box {
     padding: 40px 15px;
     text-align: center;
+    color: whitesmoke;
+    text-shadow: rgb(32, 32, 32) 0.2em 0.2em 0.3em;
 }
