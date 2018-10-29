@@ -12,3 +12,14 @@ body {
     color: whitesmoke;
     text-shadow: rgb(32, 32, 32) 0.2em 0.2em 0.3em;
 }
+.input_style{
+    text-align: right;
+    background: #6b6b6b70;
+	border: none;
+	border-bottom: 1px solid black;
+	height: 27px;
+	width: 20%;
+	font-size: 16px;
+    color: whitesmoke;
+    text-shadow: rgb(32, 32, 32) 0.2em 0.2em 0.3em;
+}
