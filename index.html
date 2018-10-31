@@ -16,7 +16,7 @@
 
       <div class="centered-box">
 
-        <select id="currency-selector" onchange="refreshPrice()" style="padding-bottom:5px;">
+        <select id="currency-selector" onchange="printPrice(); updateInput();" style="padding-bottom:5px;">
           <option value="EUR">Euro</option>
           <option value="USD">US Dollars</option>
           <option value="GBP">Pound Sterling</option>
@@ -30,7 +30,7 @@
         <h3 id="satfiat-1000">Loading</h3> 
 
        <div class="row justify-content-center">
-        <input id="satfiat-custom" onkeydown="refreshPrice()" value="" class="input_style" type="number" min="0" name=""></input>
+        <input id="satfiat-custom" onkeydown="updateInput()" value="" class="input_style" type="number" min="0" name=""></input>
 
         <h3 id="customfiat"></h3>
         </div>
